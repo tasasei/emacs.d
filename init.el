@@ -12,8 +12,9 @@
 (global-set-key [zenkaku-hankaku] 'toggle-input-method)
 (global-set-key [hiragana-katakana] 'toggle-input-method)
 ;; mozc-mode 時のカーソルの色を変える
+(set-cursor-color "#0000ff")
 (add-hook 'input-method-activate-hook '(lambda () (set-cursor-color "red")))
-(add-hook 'input-method-inactivate-hook '(lambda () (set-cursor-color "#ffffff")))
+(add-hook 'input-method-inactivate-hook '(lambda () (set-cursor-color "#0000ff")))
 
 ;; For color of function's name
 ;; 変え方は該当文字上で
