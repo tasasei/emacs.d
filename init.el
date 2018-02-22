@@ -1,12 +1,13 @@
 ;; Alt + 矢印でウィンドウを移動する
 (windmove-default-keybindings 'M) ; Alt の場合は meta を指定
 
-;; Ubuntsu
-;; sudo apt-get install emacs-mozc emacs-mozc-bin
-(require 'mozc)
-;; add in ~/.Xresources
+;; mozc
+;; In Ubuntsu "sudo apt-get install emacs-mozc emacs-mozc-bin"
+;; add 2 line in ~/.Xresources
 ;; emacs.useXIM:false
 ;; emacs24.useXIM:false
+;; And do "xrdb ~/.Xresources"
+(require 'mozc)
 (setq default-input-method "japanese-mozc")
 (global-set-key [zenkaku-hankaku] 'toggle-input-method)
 (global-set-key [hiragana-katakana] 'toggle-input-method)
