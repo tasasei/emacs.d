@@ -1,3 +1,10 @@
+;; パッケージ管理
+(require 'package)
+(add-to-list 'package-archives
+             '("MELPA Stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 ;; Alt + 矢印でウィンドウを移動する
 (windmove-default-keybindings 'M) ; Alt の場合は meta を指定
 
@@ -34,3 +41,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(font-lock-function-name-face ((t (:foreground "color-39")))))
+
